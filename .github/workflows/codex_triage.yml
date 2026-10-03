@@ -1,0 +1,28 @@
+name: Maintainer Codex Review
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  codex-triage:
+    name: Automated Security & PR Review
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run AST-Sentry on PR Changes
+        run: |
+          pip install .
+          ast-sentry src --strict
