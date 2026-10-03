@@ -1,5 +1,9 @@
 # AST-Sentry
 
+<p align="center">
+  <img src="docs/banner.jpg" alt="AST-Sentry Banner" width="100%">
+</p>
+
 [![CI Test Suite](https://img.shields.io/badge/CI-Passing-brightgreen.svg)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python Version](https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12-blue.svg)]()
