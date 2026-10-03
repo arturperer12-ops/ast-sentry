@@ -1,0 +1,186 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "ast-sentry",
+          "semanticVersion": "0.1.0",
+          "informationUri": "https://github.com/ast-sentry/ast-sentry",
+          "rules": [
+            {
+              "id": "AS-101",
+              "name": "CommandInjectionRisk",
+              "shortDescription": {
+                "text": "CommandInjectionRisk"
+              },
+              "fullDescription": {
+                "text": "Execution of system command with shell=True or uncontrolled argument string."
+              },
+              "help": {
+                "text": "Execution of system command with shell=True or uncontrolled argument string.\nSee: https://cwe.mitre.org/data/definitions/78.html"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "vulnerability",
+                  "CWE-78"
+                ],
+                "precision": "high"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              }
+            },
+            {
+              "id": "AS-102",
+              "name": "UnsafeDeserialization",
+              "shortDescription": {
+                "text": "UnsafeDeserialization"
+              },
+              "fullDescription": {
+                "text": "Deserialization of untrusted data via pickle, shelve, or unconstrained PyYAML loader."
+              },
+              "help": {
+                "text": "Deserialization of untrusted data via pickle, shelve, or unconstrained PyYAML loader.\nSee: https://cwe.mitre.org/data/definitions/502.html"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "vulnerability",
+                  "CWE-502"
+                ],
+                "precision": "high"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              }
+            },
+            {
+              "id": "AS-103",
+              "name": "BrokenCryptoAlgorithm",
+              "shortDescription": {
+                "text": "BrokenCryptoAlgorithm"
+              },
+              "fullDescription": {
+                "text": "Usage of broken cryptographic hash function (MD5/SHA1) without usedforsecurity=False."
+              },
+              "help": {
+                "text": "Usage of broken cryptographic hash function (MD5/SHA1) without usedforsecurity=False.\nSee: https://cwe.mitre.org/data/definitions/328.html"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "vulnerability",
+                  "CWE-328"
+                ],
+                "precision": "high"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              }
+            },
+            {
+              "id": "AS-104",
+              "name": "DangerousDynamicCodeExecution",
+              "shortDescription": {
+                "text": "DangerousDynamicCodeExecution"
+              },
+              "fullDescription": {
+                "text": "Use of eval() or exec() with non-constant arguments allowing arbitrary code execution."
+              },
+              "help": {
+                "text": "Use of eval() or exec() with non-constant arguments allowing arbitrary code execution.\nSee: https://cwe.mitre.org/data/definitions/95.html"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "vulnerability",
+                  "CWE-95"
+                ],
+                "precision": "high"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              }
+            },
+            {
+              "id": "AS-105",
+              "name": "HardcodedCredentialDetected",
+              "shortDescription": {
+                "text": "HardcodedCredentialDetected"
+              },
+              "fullDescription": {
+                "text": "Possible hardcoded secret, token, or password assigned to literal string value."
+              },
+              "help": {
+                "text": "Possible hardcoded secret, token, or password assigned to literal string value.\nSee: https://cwe.mitre.org/data/definitions/798.html"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "vulnerability",
+                  "CWE-798"
+                ],
+                "precision": "high"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              }
+            },
+            {
+              "id": "AS-106",
+              "name": "InsecurePRNGForSecurity",
+              "shortDescription": {
+                "text": "InsecurePRNGForSecurity"
+              },
+              "fullDescription": {
+                "text": "Standard library random module used instead of cryptographically secure secrets module."
+              },
+              "help": {
+                "text": "Standard library random module used instead of cryptographically secure secrets module.\nSee: https://cwe.mitre.org/data/definitions/338.html"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "vulnerability",
+                  "CWE-338"
+                ],
+                "precision": "high"
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              }
+            },
+            {
+              "id": "AS-107",
+              "name": "InsecureTempFileCreation",
+              "shortDescription": {
+                "text": "InsecureTempFileCreation"
+              },
+              "fullDescription": {
+                "text": "Use of insecure tempfile.mktemp() vulnerable to race conditions."
+              },
+              "help": {
+                "text": "Use of insecure tempfile.mktemp() vulnerable to race conditions.\nSee: https://cwe.mitre.org/data/definitions/377.html"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "vulnerability",
+                  "CWE-377"
+                ],
+                "precision": "high"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              }
+            }
+          ]
+        }
+      },
+      "results": []
+    }
+  ]
+}
